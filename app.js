@@ -2,20 +2,17 @@ function displayTemperature(response) {
   let temperatureElement = document.querySelector("#current-temperature");
   let cityElement = document.querySelector("#current-city");
   let dateElement = document.querySelector("#current-date");
-  let humidityElement = document.querySelector(
-    ".current-details strong:nth-of-type(1)"
-  );
-  let windSpeedElement = document.querySelector(
-    ".current-details strong:nth-of-type(2)"
-  );
+  let humidity = response.data.humidity;
+  let windSpeed = response.data.windSpeed;
 
   cityElement.innerHTML = response.data.city;
-  dateElement.innerHTML = formatDate(new Date(response.data.time * 1000));
-  humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
-  windSpeedElement.innerHTML = `${response.data.wind.speed}km/h`;
+  dateElement.innerHTML = formatDate(new Date());
   temperatureElement.innerHTML = Math.round(response.data.temperature.current);
-}
 
+  let currentDetailsElement = document.querySelector(".current-details");
+  currentDetailsElement.innerHTML = `${dateElement.innerHTML}, moderate rain <br />
+  Humidity: <strong>${humidity}%</strong>, Wind: <strong>${windSpeed}km/h</strong>`;
+}
 function formatDate(date) {
   let minutes = date.getMinutes();
   let hours = date.getHours();
