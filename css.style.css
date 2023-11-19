@@ -88,7 +88,7 @@ main {
 
 .weather-forecast {
   display: grid;
-  grid-template-columns: repeat (5, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 10px;
   justify-content: space-around;
   margin-top: 30px;
@@ -116,6 +116,7 @@ main {
   display: block;
   margin: 0 auto;
 }
+
 .weather-forecast-temperatures {
   text-align: center;
   color: #f65282;
@@ -134,4 +135,23 @@ footer {
   text-align: center;
   font-size: 14px;
   color: rgba(0, 0, 0, 0.6);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .weather-forecast {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .weather-app-data,
+  .weather-app-temperature-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Accessibility */
+.weather-app-details,
+footer {
+  color: rgba(39, 33, 66, 0.7); /* Improved contrast */
 }
