@@ -13,61 +13,60 @@ a {
 }
 
 .weather-app {
-  background: rgba(
-    255,
-    255,
-    255,
-    0.8
-  ); /* Slight transparency for better visibility */
+  background: white; /* Changed from semi-transparent white to solid white */
   max-width: 600px;
-  margin: 45px auto;
-  box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
-  border-radius: 16px;
+  margin: 60px auto; /* Increased top and bottom margin */
   padding: 30px;
-  color: #333; /* Default text color for better contrast */
+  border-radius: 10px; /* Adjusted border-radius */
+  box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
+  color: rgba(39, 33, 66, 0.4); /* Text color from the first snippet */
 }
 
 header {
-  border-bottom: 1px solid #eee; /* Lighter border for subtlety */
+  border-bottom: 1px solid #f9f7fe; /* Lighter border color from the first snippet */
   padding-bottom: 30px;
 }
 
-.search-form-input,
-.search-form-button {
+.search-input,
+.search-button {
   border-radius: 6px;
-  padding: 15px 20px;
+  padding: 20px; /* Padding from the first snippet */
   font-size: 16px;
 }
 
-.search-form-input {
+.search-input {
   background-color: #f9f7fe;
   border: none;
-  width: 80%;
+  color: rgba(39, 33, 66, 0.4);
+  width: 75%; /* Width from the first snippet */
 }
 
-.search-form-button {
+.search-button {
   background: #885df1;
   border: none;
   margin-left: 5px;
   color: white;
+  line-height: 1;
 }
 
 .weather-app-data {
   display: flex;
   justify-content: space-between;
-  align-items: center; /* Align items for better visual alignment */
+  align-items: center;
 }
 
 .weather-app-city {
   margin: 0;
   font-size: 38px;
   line-height: 48px;
+  font-weight: 900; /* Font weight from the first snippet */
 }
 
 .weather-app-details {
   font-size: 16px;
   line-height: 24px;
-  font-weight: 500;
+  font-weight: 400; /* Font weight from the first snippet */
+  color: rgba(39, 33, 66, 0.4); /* Color from the first snippet */
 }
 
 .weather-app-details strong {
@@ -76,7 +75,7 @@ header {
 
 .weather-app-temperature-container {
   display: flex;
-  align-items: center; /* Align temperature elements */
+  align-items: center;
 }
 
 .weather-app-icon {
@@ -126,10 +125,11 @@ header {
 }
 
 footer {
-  border-top: 1px solid #eee;
-  padding-top: 30px;
+  border-top: 1px solid #f9f7fe; /* Border color from the first snippet */
+  padding-top: 15px; /* Adjusted padding */
   text-align: center;
   font-size: 14px;
+  color: rgba(39, 33, 66, 0.4); /* Color from the first snippet */
 }
 
 /* Responsive Design */
