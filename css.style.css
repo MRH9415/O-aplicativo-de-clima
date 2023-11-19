@@ -4,22 +4,31 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   font-family: "Roboto", sans-serif;
-  color: white; /* Ensuring text is readable against the background */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Full viewport height */
+  margin: 0; /* Remove default margin */
+}
+
+.weather-app {
+  background: white;
+  width: 600px; /* Width of the square */
+  height: 600px; /* Height of the square */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distribute space between children */
+  align-items: center; /* Center-align children */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
+  overflow: hidden; /* Ensures no content spills out */
 }
 
 a {
   color: #885df1;
   text-decoration: none; /* Improving readability */
-}
-
-.weather-app {
-  background: white; /* Changed from semi-transparent white to solid white */
-  max-width: 600px;
-  margin: 60px auto; /* Increased top and bottom margin */
-  padding: 30px;
-  border-radius: 10px; /* Adjusted border-radius */
-  box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
-  color: rgba(39, 33, 66, 0.4); /* Text color from the first snippet */
 }
 
 header {
@@ -134,23 +143,8 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .weather-forecast {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .weather-app-data,
-  .weather-app-temperature-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
   .weather-app {
-    margin: 20px;
+    width: 90vw; /* Adjust width for smaller screens */
+    height: 90vw; /* Adjust height to maintain square shape */
   }
-}
-
-/* Accessibility Improvements */
-*:focus {
-  outline: 3px solid #885df1; /* Focus outline for keyboard navigation */
 }
