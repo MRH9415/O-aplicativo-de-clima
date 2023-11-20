@@ -108,3 +108,6 @@ searchFormElement.addEventListener("submit", handleSearchSubmit);
 
 // Initial city search
 searchCity("Amsterdam");
+
+// Getting icon weather forecast
+iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon" />`;
