@@ -1,4 +1,8 @@
 body {
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/099/497/original/weather_background.png?1696781767");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   background-color: #f9f7fe;
   font-family: "Roboto", sans-serif;
   margin: 0;
