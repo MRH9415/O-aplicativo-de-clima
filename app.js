@@ -1,14 +1,15 @@
 // Refreshes the weather information on the page
 function refreshWeather(response) {
   let temperatureElement = document.querySelector("#temperature");
-  let temperature = response.data.temperature.current;
   let cityElement = document.querySelector("#city");
   let descriptionElement = document.querySelector("#description");
   let humidityElement = document.querySelector("#humidity");
   let windSpeedElement = document.querySelector("#wind-speed");
   let timeElement = document.querySelector("#time");
-  let date = new Date(response.data.time * 1000);
   let iconElement = document.querySelector("#icon");
+
+  let temperature = response.data.temperature.current;
+  let date = new Date(response.data.time * 1000);
 
   cityElement.innerHTML = response.data.city;
   timeElement.innerHTML = formatDate(date);
@@ -23,8 +24,8 @@ function refreshWeather(response) {
 
 // Formats the date into a readable format
 function formatDate(date) {
-  let minutes = date.getMinutes();
   let hours = date.getHours();
+  let minutes = date.getMinutes().toString().padStart(2, "0");
   let days = [
     "Sunday",
     "Monday",
@@ -35,10 +36,6 @@ function formatDate(date) {
     "Saturday",
   ];
   let day = days[date.getDay()];
-
-  if (minutes < 10) {
-    minutes = `0${minutes}`;
-  }
 
   return `${day} ${hours}:${minutes}`;
 }
@@ -69,9 +66,10 @@ function formatDay(timestamp) {
 
 // Fetches the forecast for the specified city
 function getForecast(city) {
-  let apiKey = "b2a5adcct04b33178913oc335f405433";
+  let apiKey = "c9b0ec623aacc60coeb8df5a545t1489";
   let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
-  axios(apiUrl)
+  axios
+    .get(apiUrl)
     .then(displayForecast)
     .catch((error) => console.error("API request failed", error));
 }
@@ -108,6 +106,3 @@ searchFormElement.addEventListener("submit", handleSearchSubmit);
 
 // Initial city search
 searchCity("Amsterdam");
-
-// Getting icon weather forecast
-iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon" />`;
