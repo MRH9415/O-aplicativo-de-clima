@@ -22,9 +22,9 @@
             placeholder="Enter a city.."
             required
             id="search-form-input"
-            class="search-form-input"
+            class="search-input"
           />
-          <input type="submit" value="Search" class="search-form-button" />
+          <input type="submit" value="Search" class="search-button" />
         </form>
       </header>
       <main>
@@ -40,7 +40,7 @@
             </p>
           </div>
           <div class="weather-app-temperature-container">
-            <div id="icon"></div>
+            <div id="icon" class="weather-icon"></div>
             <div class="weather-app-temperature" id="temperature"></div>
             <div class="weather-app-unit">°C</div>
           </div>
@@ -51,6 +51,13 @@
           <div class="weather-forecast-day">Day 3</div>
           <div class="weather-forecast-day">Day 4</div>
           <div class="weather-forecast-day">Day 5</div>
+        </div>
+        <div
+          class="weather-error-message"
+          id="error-message"
+          style="display: none"
+        >
+          Unable to retrieve weather data.
         </div>
       </main>
       <footer>
