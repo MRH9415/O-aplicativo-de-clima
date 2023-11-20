@@ -1,0 +1,147 @@
+body {
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/099/497/original/weather_background.png?1696781767");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.weather-app {
+  background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+  width: 600px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
+  overflow: hidden;
+  color: #333; /* Dark color for text */
+}
+
+.search-form {
+  /* Add styles if needed */
+}
+
+.search-input,
+.search-button {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.search-input {
+  /* Additional styles for search input */
+}
+
+.search-button {
+  /* Additional styles for search button */
+}
+
+.search-button:hover,
+a:hover {
+  background-color: #885df1; /* Adjust color as needed */
+  color: white;
+}
+
+.search-button:active,
+a:active {
+  transform: scale(0.98); /* Slight shrink effect */
+}
+
+.weather-app-data {
+  background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.weather-app-city {
+  font-size: 24px; /* Increased font size */
+  color: #333;
+}
+
+.weather-app-details {
+  font-size: 16px; /* Increased font size */
+  color: #333;
+}
+
+.weather-app-temperature-container {
+  /* Container styles */
+}
+
+.weather-icon {
+  width: 80px; /* Adjust as needed */
+  height: 80px; /* Adjust as needed */
+  margin: 10px auto;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.weather-app-temperature {
+  font-size: 2em; /* Large font for temperature */
+  font-weight: bold;
+  color: #333;
+}
+
+.weather-app-unit {
+  /* Styles for temperature unit */
+}
+
+.weather-forecast {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  width: 100%;
+  padding: 0 10px;
+  background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
+}
+
+.weather-forecast-day {
+  text-align: center;
+  font-size: 14px; /* Adjusted font size */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+}
+
+.weather-error-message {
+  color: red;
+  text-align: center;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .weather-app {
+    width: 90vw;
+    height: 90vw;
+  }
+
+  .weather-forecast {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .weather-forecast-day {
+    font-size: 12px;
+  }
+
+  .weather-app-city,
+  .weather-app-details,
+  .weather-app-temperature {
+    font-size: smaller;
+  }
+}
+
+/* Accessibility Improvements */
+a:focus,
+button:focus,
+input:focus {
+  outline: 3px solid #885df1;
+}
