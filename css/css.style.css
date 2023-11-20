@@ -98,8 +98,6 @@ main {
 .weather-icon {
   width: 88px;
   height: 88px;
-  background-size: contain;
-  background-repeat: no-repeat;
 }
 
 .weather-app-temperature {
@@ -120,7 +118,7 @@ main {
   margin-top: 30px;
 }
 
-.weather-forecast-day {
+.weather-forecast-date {
   text-align: center;
   color: rgba(39, 33, 66, 0.4);
   font-size: 16px;
@@ -133,8 +131,6 @@ main {
   height: 88px;
   display: block;
   margin: 0 auto;
-  background-size: contain;
-  background-repeat: no-repeat;
 }
 
 .weather-forecast-temperatures {
