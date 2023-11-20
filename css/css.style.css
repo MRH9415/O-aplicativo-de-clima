@@ -24,9 +24,69 @@ body {
   border-radius: 10px;
   box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
   overflow: hidden;
+  color: #333; /* Darker color for better readability */
 }
 
-/* ... (Other styles) ... */
+.search-form {
+  /* Add styles if needed */
+}
+
+.search-input,
+.search-button {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.search-input {
+  /* Additional styles for search input */
+}
+
+.search-button {
+  /* Additional styles for search button */
+}
+
+.search-button:hover,
+a:hover {
+  background-color: #885df1; /* Adjust color as needed */
+  color: white;
+}
+
+.search-button:active,
+a:active {
+  transform: scale(0.98); /* Slight shrink effect */
+}
+
+.weather-app-data {
+  /* Add styles if needed */
+}
+
+.weather-app-city {
+  /* Styles for city name */
+}
+
+.weather-app-details {
+  /* Styles for weather details */
+}
+
+.weather-app-temperature-container {
+  /* Container styles */
+}
+
+.weather-icon {
+  width: 80px; /* Adjust as needed */
+  height: 80px; /* Adjust as needed */
+  margin: 10px auto;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.weather-app-temperature {
+  font-size: 2em; /* Large font for temperature */
+  font-weight: bold;
+}
+
+.weather-app-unit {
+  /* Styles for temperature unit */
+}
 
 .weather-forecast {
   display: grid;
@@ -45,20 +105,10 @@ body {
   align-items: center;
 }
 
-.weather-forecast-icon {
-  width: 50px;
-  height: 50px;
-  margin: 5px auto;
-}
-
-.weather-forecast-temperatures {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.weather-forecast-temperature {
-  font-size: 12px;
+.weather-error-message {
+  color: red;
+  text-align: center;
+  margin-top: 20px;
 }
 
 @media (max-width: 768px) {
@@ -75,7 +125,6 @@ body {
     font-size: 12px;
   }
 
-  /* Adjust font sizes and padding for smaller screens */
   .weather-app-city,
   .weather-app-details,
   .weather-app-temperature {
@@ -88,15 +137,4 @@ a:focus,
 button:focus,
 input:focus {
   outline: 3px solid #885df1;
-}
-
-/* Ensuring high contrast for text over background */
-.weather-app {
-  color: #333; /* Darker color for better readability */
-}
-
-/* Additional styles for better visibility */
-.search-input,
-.search-button {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
